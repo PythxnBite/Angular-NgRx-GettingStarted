@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Imports for loading & configuring the in-memory web api
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { ProductData } from './products/product-data';
+import { ProductData } from './state/product/product-data';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -31,15 +31,6 @@ import { EffectsModule } from '@ngrx/effects';
     UserModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
-    // StoreModule.forRoot({},
-    //   {
-    //     runtimeChecks: {
-    //       strictStateImmutability: true,
-    //       strictActionImmutability: true,
-    //       strictStateSerializability: true,
-    //       strictActionSerializability: true
-    //     }
-    //   }),
     StoreDevtoolsModule.instrument({
       name: 'APM Demo App DevTools',
       maxAge: 25,

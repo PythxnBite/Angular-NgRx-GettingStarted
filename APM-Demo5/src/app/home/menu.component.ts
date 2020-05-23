@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../state/user';
 
-import { AuthService } from '../user/auth.service';
 
 @Component({
   selector: 'pm-menu',
@@ -21,8 +21,7 @@ export class MenuComponent implements OnInit {
     return '';
   }
 
-  constructor(private router: Router,
-              private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
